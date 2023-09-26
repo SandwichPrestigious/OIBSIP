@@ -1,21 +1,23 @@
+//importing necessary packages
 import javax.swing.*;
-import java.awt.*;
+import java.awt.*;//gui layout
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//class for cancellation form
 public class CancellationForm extends JFrame {
     private JTextField reservationIdField;
 
     public CancellationForm() {
         setTitle("Cancellation Form");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 150);
+        setSize(300, 150);// basic properties of the form
 
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(2, 2));
+        panel.setLayout(new GridLayout(2, 2));//creating a panel for the form.
 
         JLabel reservationIdLabel = new JLabel("Reservation ID:");
-        reservationIdField = new JTextField(20);
+        reservationIdField = new JTextField(20);//the reservation id is in the form of textfield.
 
         JButton cancelButton = new JButton("Cancel Reservation");
         cancelButton.addActionListener(new ActionListener() {
@@ -35,7 +37,7 @@ public class CancellationForm extends JFrame {
                 }
             }
         });
-
+        //adding all panels to the form.    
         panel.add(reservationIdLabel);
         panel.add(reservationIdField);
         panel.add(new JLabel()); // Empty space
